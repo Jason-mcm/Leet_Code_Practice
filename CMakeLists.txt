@@ -3,4 +3,4 @@ project(temp)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(temp main.cpp TwoSum.cpp TwoSum.h)
+add_executable(temp main.cpp TwoSum.cpp)

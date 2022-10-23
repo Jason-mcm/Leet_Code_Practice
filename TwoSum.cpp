@@ -2,12 +2,17 @@
 // Created by Jason McMillan on 10/17/22.
 //
 
-#include "TwoSum.h"
 #include <map>
 #include <vector>
 #include <iostream>
 
-std::vector<int> TwoSum::twoSum(std::vector<int>& nums, int target) {
+/**
+ * returns indices of two numbers that add up to target
+ * @param nums vector of integers
+ * @param target target value
+ * @return std::vector<int>
+ */
+std::vector<int> twoSum(std::vector<int>& nums, int target) {
     std::map<int, int> dict;
     for (int i = 0; i < nums.size(); i++) {
         int compliment = target - nums[i];
@@ -21,8 +26,7 @@ std::vector<int> TwoSum::twoSum(std::vector<int>& nums, int target) {
 //int main() {
 //    std::vector<int> nums {2,7,11,15};
 //    int target = 7;
-//    TwoSum twoSum;
-//    std::vector<int> result = twoSum.twoSum(nums, target);
+//    std::vector<int> result = twoSum(nums, target);
 //    for (int i : result) {
 //        std::cout << i << " ";
 //    }
