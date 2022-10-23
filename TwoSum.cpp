@@ -17,18 +17,19 @@ std::vector<int> twoSum(std::vector<int>& nums, int target) {
     for (int i = 0; i < nums.size(); i++) {
         int compliment = target - nums[i];
         if (dict.find(compliment) != dict.end()) {
-            return std::vector<int> {dict[i], i};
+            return {dict[i], i};
         }
         dict[i] = i;
     }
+    return {-1, -1};
 }
 
-//int main() {
-//    std::vector<int> nums {2,7,11,15};
-//    int target = 7;
-//    std::vector<int> result = twoSum(nums, target);
-//    for (int i : result) {
-//        std::cout << i << " ";
-//    }
-//    std::cout << std::endl;
-//}
+int main() {
+    std::vector<int> nums {2,7,11,15};
+    int target = 7;
+    std::vector<int> result = twoSum(nums, target);
+    for (int i : result) {
+        std::cout << i << " ";
+    }
+    std::cout << std::endl;
+}
